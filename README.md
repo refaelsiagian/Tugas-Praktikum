@@ -66,6 +66,5 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 =======
-# Praktikum-PWL
-Berisi kode pembelajaran praktikum Pemrograman Web Lanjutan
->>>>>>> 89a36f56111acdceddbdc8cca6e38ba2d6690d77
+# Tugas-Praktikum
+Berisi tugas praktikum Pemrograman Web Lanjutan
