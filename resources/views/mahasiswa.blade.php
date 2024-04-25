@@ -6,7 +6,7 @@
     <button type="button" class="btn btn-success ">Tambah Data</button>
     </div>
     <div class="row">
-        <table class="table">
+        <table class="table"> 
             <thead>
               <tr>
                 <th scope="col">ID</th>
