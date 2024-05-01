@@ -94,6 +94,10 @@ class MahasiswaController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        // delete
+        $mahasiswa = Mahasiswa::find($id);
+        $mahasiswa->delete();
+
+        return redirect()->route('index');
     }
 }

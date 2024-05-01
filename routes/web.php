@@ -27,5 +27,7 @@ Route::post('/mahasiswa/store', [MahasiswaController::class, 'store'])->name('st
 
 Route::get('/mahasiswa/{id}/edit', [MahasiswaController::class, 'edit'])->name('edit');
 Route::put('/mahasiswa/{id}', [MahasiswaController::class, 'update'])->name('update');
+
+Route::delete('/mahasiswa/{id}', [MahasiswaController::class, 'destroy'])->name('destroy');
 Route::get('/dosen', [DosenController::class, 'index']);
 
