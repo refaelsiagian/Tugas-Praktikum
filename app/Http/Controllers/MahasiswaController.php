@@ -23,7 +23,7 @@ class MahasiswaController extends Controller
      */
     public function create()
     {
-        //
+        return view('create');
     }
 
     /**
@@ -31,7 +31,21 @@ class MahasiswaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nama' => 'required',
+            'nim' => 'required|unique:mahasiswa',
+            'jurusan' => 'required',
+            'alamat' => 'required',
+        ]);
+
+        $mahasiswa = new Mahasiswa;
+        $mahasiswa->nama = $request->nama;
+        $mahasiswa->nim = $request->nim;
+        $mahasiswa->jurusan = $request->jurusan;
+        $mahasiswa->alamat = $request->alamat;
+        $mahasiswa->save();
+ 
+        return redirect()->route('index');
     }
 
     /**
@@ -47,7 +61,10 @@ class MahasiswaController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $mahasiswa = Mahasiswa::find($id);
+        return view('update', [
+            'mahasiswa' => $mahasiswa
+        ]);
     }
 
     /**
@@ -55,7 +72,21 @@ class MahasiswaController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+            'nama' => 'required',
+            'nim' => 'required|unique:mahasiswa',
+            'jurusan' => 'required',
+            'alamat' => 'required',
+        ]);
+        
+        $mahasiswa = Mahasiswa::find($id);
+        $mahasiswa->nama = $request->nama;
+        $mahasiswa->nim = $request->nim;
+        $mahasiswa->jurusan = $request->jurusan;
+        $mahasiswa->alamat = $request->alamat;
+        $mahasiswa->save();
+ 
+        return redirect()->route('index');
     }
 
     /**

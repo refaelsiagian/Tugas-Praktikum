@@ -14,7 +14,7 @@ class Mahasiswa extends Model
     public function ktm(){
         return $this->hasOne(Ktm::class, 'id_mahasiswa');
     }
-    // public $timestamps = false;
+    public $timestamps = false;
     // protected $fillable = [
     //     'nama',
     //     'nim',
