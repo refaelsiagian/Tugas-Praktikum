@@ -10,9 +10,9 @@ class Mahasiswa extends Model
     use HasFactory;
 
     protected $table = 'mahasiswa';
-    protected $primaryKey = 'id_mahasiswa';
+    protected $primaryKey = 'id';
     public function ktm(){
-        return $this->hasOne(Ktm::class, 'id_mahasiswa');
+        return $this->hasOne(Ktm::class, 'id');
     }
     public $timestamps = false;
     // protected $fillable = [

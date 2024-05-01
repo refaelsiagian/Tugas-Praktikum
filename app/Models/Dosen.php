@@ -9,8 +9,9 @@ class Dosen extends Model
 {
     use HasFactory;
     protected $table = 'dosen';
-    protected $primaryKey = 'id_dosen';
+    protected $primaryKey = 'id';
     public function detail_dosen(){
-        return $this->hasOne(Detail_dosen::class, 'id_dosen');
+        return $this->hasOne(DetailDosen::class, 'id');
     }
+    public $timestamps = false;
 }

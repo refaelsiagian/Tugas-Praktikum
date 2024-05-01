@@ -6,6 +6,16 @@ namespace Database\Seeders;
 use App\Models\Staff;
 use Illuminate\Database\Seeder;
 
+use App\Models\Dosen;
+use App\Models\Ktm;
+use App\Models\Mahasiswa;
+use App\Models\DetailDosen;
+
+use Database\Seeders\DosenSeeder;
+use Database\Seeders\KtmSeeder;
+use Database\Seeders\MahasiswaSeeder;
+use Database\Seeders\DetailDosenSeeder;
+
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -19,5 +29,12 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com', 
         // ]);
+
+        $this->call([
+            MahasiswaSeeder::class,
+            DosenSeeder::class,
+            KtmSeeder::class,
+            DetailDosenSeeder::class,
+        ]);
     }
 }
